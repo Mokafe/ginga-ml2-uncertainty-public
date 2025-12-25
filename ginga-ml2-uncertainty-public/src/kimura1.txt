@@ -1,0 +1,84 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.fft import fftn, ifftn
+
+# ==========================================
+# 1. 物理エンジン（木村理論の抽象化実装）
+# ==========================================
+class KimuraSolver:
+    def __init__(self, size=64):
+        self.size = size
+
+    def reconstruct(self, G, k_val=5.0):
+        # 式(10)-(14)の抽象化: 位相シフトによる逆伝搬
+        # 高次元データをフーリエ空間で補正
+        phi_k = G * np.exp(1j * k_val)
+        phi_space = ifftn(phi_k)
+
+        # 式(15-17): 密度分布rhoの抽出 (絶対値による構造化)
+        rho = np.abs(phi_space)
+        # 規格化
+        rho = (rho - rho.min()) / (rho.max() - rho.min() + 1e-8)
+        return rho
+
+# ==========================================
+# 2. データ生成（Kaggle風：Synthetic Generator）
+# ==========================================
+def generate_bench_data(size=64, num_objects=2, noise_level=0.1):
+    grid = np.zeros((size, size, size))
+    for _ in range(num_objects):
+        pos = np.random.randint(size//4, 3*size//4, 3)
+        radius = np.random.randint(3, 7)
+        z, y, x = np.ogrid[:size, :size, :size]
+        dist = np.sqrt((x-pos[0])**2 + (y-pos[1])**2 + (z-pos[2])**2)
+        grid[dist <= radius] = 1.0
+
+    # EMF散乱データの生成とノイズ付加
+    G = fftn(grid) + np.random.normal(0, noise_level, grid.shape) * 1j
+    return grid, G
+
+# ==========================================
+# 3. 可視化（GitHub/README用）
+# ==========================================
+def plot_results(gt, recon):
+    fig, axes = plt.subplots(2, 3, figsize=(15, 8))
+    mid = gt.shape[0] // 2
+
+    planes = [
+        (mid, "XY Plane (Top View)"),
+        (mid, "XZ Plane (Front View)"),
+        (mid, "YZ Plane (Side View)")
+    ]
+
+    for i, (m, label) in enumerate(planes):
+        # Ground Truth
+        data_gt = gt[m, :, :] if i==0 else (gt[:, m, :] if i==1 else gt[:, :, m])
+        axes[0, i].imshow(data_gt, cmap='gray')
+        axes[0, i].set_title(f"GT: {label}")
+
+        # Reconstruction
+        data_recon = recon[m, :, :] if i==0 else (recon[:, m, :] if i==1 else recon[:, :, m])
+        im = axes[1, i].imshow(data_recon, cmap='jet')
+        axes[1, i].set_title(f"Recon: {label}")
+        plt.colorbar(im, ax=axes[1, i])
+
+    plt.tight_layout()
+    plt.show()
+
+# ==========================================
+# メイン実行ルーチン
+# ==========================================
+print("Generating EMF Synthetic Data...")
+gt_3d, G_data = generate_bench_data(size=64, num_objects=2, noise_level=0.05)
+
+print("Solving Inverse Problem using Kimura's Theory...")
+solver = KimuraSolver(size=64)
+rho_recon = solver.reconstruct(G_data)
+
+print("Visualizing Results...")
+plot_results(gt_3d, rho_recon)
+
+# Kaggle Score (IoU) の計算
+threshold = 0.4
+iou = np.logical_and(gt_3d, rho_recon > threshold).sum() / np.logical_or(gt_3d, rho_recon > threshold).sum()
+print(f"\nBenchmark Score (IoU): {iou:.4f}")

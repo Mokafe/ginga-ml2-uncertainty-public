@@ -1,0 +1,198 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.fft import fftn, ifftn, ifftshift
+
+# ==========================================
+# 0. 物理前方モデル（Green関数 + FFT畳み込み）
+#    - "G = FFT(grid)" を廃止し、
+#      "G = grid * Green"（Born近似の簡略形）を導入
+# ==========================================
+class PhysicsForwardModel:
+    '''
+    スカラー波の簡略逆散乱モデル（Born近似の超簡略形）
+    観測 = Green関数との畳み込み（FFTで高速化）
+    '''
+    def __init__(self, size=64, dx=2e-3, freq=2.4e9, eps_r=40.0):
+        self.size = int(size)
+        self.dx = float(dx)  # [m/px]
+        c = 3e8
+        self.wavelength = c / (float(freq) * np.sqrt(float(eps_r)))
+        self.k = 2 * np.pi / self.wavelength
+        self._H_cache = {}  # key: N -> FFT(Green) for that N
+
+    def generate_green_function(self, N):
+        '''3次元空間の自由空間Green関数（スカラー近似）'''
+        z, y, x = np.ogrid[-N//2:N//2, -N//2:N//2, -N//2:N//2]
+        r = np.sqrt((x*self.dx)**2 + (y*self.dx)**2 + (z*self.dx)**2)
+
+        green = np.zeros((N, N, N), dtype=np.complex128)
+        mask = r > 0
+        green[mask] = np.exp(1j * self.k * r[mask]) / (4 * np.pi * r[mask])
+
+        # r=0 は特異点になるので 0 に固定（簡易な正則化）
+        green[N//2, N//2, N//2] = 0.0
+        return green
+
+    def _fft_green(self, N):
+        '''FFT(Green) をキャッシュして返す'''
+        N = int(N)
+        if N not in self._H_cache:
+            green = self.generate_green_function(N)
+            # 畳み込みのために shift を戻してからFFT
+            H = fftn(ifftshift(green))
+            self._H_cache[N] = H
+        return self._H_cache[N]
+
+    @staticmethod
+    def _pad_center(arr, N_pad):
+        '''中心配置でゼロパディング'''
+        N = arr.shape[0]
+        out = np.zeros((N_pad, N_pad, N_pad), dtype=arr.dtype)
+        s = (N_pad - N) // 2
+        out[s:s+N, s:s+N, s:s+N] = arr
+        return out
+
+    @staticmethod
+    def _crop_center(arr, N):
+        '''中心を切り出す'''
+        N_pad = arr.shape[0]
+        s = (N_pad - N) // 2
+        return arr[s:s+N, s:s+N, s:s+N]
+
+    def simulate_scattering(self, grid, noise_level=0.0, pad_factor=1, seed=None):
+        '''
+        前方：G_measured = grid * Green + noise
+        pad_factor>1 で循環畳み込みの巻き戻りを軽減（簡易）
+        '''
+        grid = np.asarray(grid)
+        N = grid.shape[0]
+        N_pad = int(pad_factor * N)
+
+        grid_p = self._pad_center(grid.astype(np.complex128), N_pad)
+        H = self._fft_green(N_pad)
+
+        G_p = ifftn(fftn(grid_p) * H)
+        G = self._crop_center(G_p, N)
+
+        if noise_level and noise_level > 0:
+            rng = np.random.default_rng(seed)
+            noise = rng.normal(0, noise_level, G.shape) + 1j * rng.normal(0, noise_level, G.shape)
+            G = G + noise
+
+        return G
+
+    def deconvolve_direct(self, G_measured, reg_lambda=1e-3, pad_factor=1):
+        '''
+        逆：周波数領域での直接解（Wiener/Tikhonov的）
+        X = H* Y / (|H|^2 + λ)
+        '''
+        G_measured = np.asarray(G_measured)
+        N = G_measured.shape[0]
+        N_pad = int(pad_factor * N)
+
+        Y_p = self._pad_center(G_measured.astype(np.complex128), N_pad)
+        H = self._fft_green(N_pad)
+
+        Y = fftn(Y_p)
+        X = np.conj(H) * Y / (np.abs(H)**2 + float(reg_lambda))
+        x_p = ifftn(X)
+
+        x = self._crop_center(x_p, N)
+        rho = np.abs(x)
+        rho = (rho - rho.min()) / (rho.max() - rho.min() + 1e-8)
+        return rho
+
+
+# ==========================================
+# 1. 逆問題ソルバー（直接解）
+# ==========================================
+class KimuraSolver:
+    '''
+    元の "位相シフトIFFT" を、Green関数前方モデルに整合する
+    "周波数領域の正則化付き直接逆変換" に置換。
+    '''
+    def __init__(self, forward_model: PhysicsForwardModel, size=64, reg_lambda=1e-3, pad_factor=1):
+        self.size = int(size)
+        self.forward = forward_model
+        self.reg_lambda = float(reg_lambda)
+        self.pad_factor = int(pad_factor)
+
+    def reconstruct(self, G_measured, **kwargs):
+        # kwargs は互換性用（k_val などを渡されても無視）
+        return self.forward.deconvolve_direct(
+            G_measured,
+            reg_lambda=self.reg_lambda,
+            pad_factor=self.pad_factor
+        )
+
+
+# ==========================================
+# 2. データ生成（Kaggle風：Synthetic Generator）
+# ==========================================
+def generate_bench_data(size=64, num_objects=2, noise_level=0.1, seed=None):
+    '''
+    3D球状異常体を生成し、PhysicsForwardModelで散乱場を生成。
+    '''
+    rng = np.random.default_rng(seed)
+    grid = np.zeros((size, size, size), dtype=np.float32)
+
+    for _ in range(num_objects):
+        # 端に寄せない（巻き戻りの影響を避ける）
+        pos = rng.integers(size//4, 3*size//4, 3)
+        radius = int(rng.integers(3, 7))
+        z, y, x = np.ogrid[:size, :size, :size]
+        dist = np.sqrt((x-pos[0])**2 + (y-pos[1])**2 + (z-pos[2])**2)
+        grid[dist <= radius] = 1.0
+
+    G = forward.simulate_scattering(grid, noise_level=noise_level, pad_factor=1, seed=seed)
+    return grid, G
+
+
+# ==========================================
+# 3. 可視化（GitHub/README用）
+# ==========================================
+def plot_results(gt, recon):
+    fig, axes = plt.subplots(2, 3, figsize=(15, 8))
+    mid = gt.shape[0] // 2
+
+    planes = [
+        (mid, "XY Plane (Top View)"),
+        (mid, "XZ Plane (Front View)"),
+        (mid, "YZ Plane (Side View)")
+    ]
+
+    for i, (m, label) in enumerate(planes):
+        # Ground Truth
+        data_gt = gt[m, :, :] if i==0 else (gt[:, m, :] if i==1 else gt[:, :, m])
+        axes[0, i].imshow(data_gt, cmap='gray')
+        axes[0, i].set_title(f"GT: {label}")
+
+        # Reconstruction
+        data_recon = recon[m, :, :] if i==0 else (recon[:, m, :] if i==1 else recon[:, :, m])
+        axes[1, i].imshow(data_recon, cmap='jet')
+        axes[1, i].set_title(f"Recon: {label}")
+
+    plt.tight_layout()
+    plt.show()
+
+
+# ==========================================
+# 4. デモ実行
+# ==========================================
+# 前方モデル（パラメータはREADMEの「波長」議論に繋げられる）
+forward = PhysicsForwardModel(size=64, dx=2e-3, freq=2.4e9, eps_r=40.0)
+
+print("Generating EMF Synthetic Data (Green Convolution Forward Model)...")
+gt_3d, G_measured = generate_bench_data(size=64, num_objects=2, noise_level=0.05, seed=0)
+
+print("Solving Inverse Problem (Direct Deconvolution)...")
+solver = KimuraSolver(forward_model=forward, size=64, reg_lambda=1e-3, pad_factor=1)
+rho_recon = solver.reconstruct(G_measured)
+
+print("Visualizing Results...")
+plot_results(gt_3d, rho_recon)
+
+# Kaggle Score (IoU) の計算
+threshold = 0.4
+iou = np.logical_and(gt_3d > 0.5, rho_recon > threshold).sum() / np.logical_or(gt_3d > 0.5, rho_recon > threshold).sum()
+print(f"\nBenchmark Score (IoU): {iou:.4f}")

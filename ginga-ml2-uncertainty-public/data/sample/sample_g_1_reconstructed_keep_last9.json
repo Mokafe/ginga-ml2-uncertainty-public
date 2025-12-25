@@ -1,0 +1,1908 @@
+[
+  {
+    "chapter": {
+      "title": "一、午后（ごご）の授業",
+      "scene_id": "1_gogo_class"
+    },
+    "start_global_step": 1,
+    "time_series_data": [
+      {
+        "global_step": 1,
+        "local_step": 1,
+        "scene_id": "1_gogo_class",
+        "event": "手を上げかけて引っ込める（自信の揺れ）",
+        "x": [
+          0.5,
+          0.55,
+          0.0
+        ],
+        "local_time": 0.0,
+        "status": "unlabeled",
+        "desc": "答えは知っている記憶があるが、自己評価の不安で行動を抑える。",
+        "evidence": [
+          "手をあげようとして、急いでやめました",
+          "いつか雑誌で読んだのでしたが"
+        ]
+      },
+      {
+        "global_step": 2,
+        "local_step": 2,
+        "scene_id": "1_gogo_class",
+        "event": "疲労と欠乏で『わからない』感覚が増す",
+        "x": [
+          0.5,
+          0.65,
+          0.2
+        ],
+        "local_time": 0.2,
+        "status": "unlabeled",
+        "desc": "眠気と学習資源の欠乏が継続し、理解の手応えが失われる。",
+        "evidence": [
+          "毎日教室でもねむく",
+          "どんなこともよくわからない"
+        ]
+      },
+      {
+        "global_step": 3,
+        "local_step": 3,
+        "scene_id": "1_gogo_class",
+        "event": "先生に見つかり指名される（公的圧力）",
+        "x": [
+          0.45,
+          0.7,
+          0.4
+        ],
+        "local_time": 0.4,
+        "status": "unlabeled",
+        "desc": "注目が集まり、失敗への恐れが自己防衛を強める。",
+        "evidence": [
+          "先生は早くもそれを見附けた",
+          "あなたはわかっているのでしょう"
+        ]
+      },
+      {
+        "global_step": 4,
+        "local_step": 4,
+        "scene_id": "1_gogo_class",
+        "event": "立つが答えられない（無力感の顕在化）",
+        "x": [
+          0.4,
+          0.72,
+          0.6
+        ],
+        "local_time": 0.6,
+        "status": "unlabeled",
+        "desc": "意気込んで立つが言葉が出ず、自己評価の低下が進む。",
+        "evidence": [
+          "勢よく立ちあがりましたが",
+          "答えることができないのでした"
+        ]
+      },
+      {
+        "global_step": 5,
+        "local_step": 5,
+        "scene_id": "1_gogo_class",
+        "event": "嘲笑と赤面（自己防衛への退避）",
+        "x": [
+          0.25,
+          0.8,
+          0.8
+        ],
+        "local_time": 0.8,
+        "status": "labeled",
+        "label": 1,
+        "desc": "他者の視線と笑いが羞恥を増幅し、関係から退きたくなる状態に傾く。",
+        "evidence": [
+          "くすっとわらいました",
+          "どぎまぎしてまっ赤になって"
+        ]
+      },
+      {
+        "global_step": 6,
+        "local_step": 6,
+        "scene_id": "1_gogo_class",
+        "event": "涙と関係の再解釈（推測による共感の芽）",
+        "x": [
+          0.6,
+          0.75,
+          1.0
+        ],
+        "local_time": 1.0,
+        "status": "unlabeled",
+        "desc": "涙が出るほど痛む中で、友が『気の毒がって』配慮したのだと推測し、他者志向の解釈が生まれる（推測）。",
+        "evidence": [
+          "涙がいっぱいになりました",
+          "気の毒がってわざと返事を"
+        ]
+      }
+    ],
+    "range": {
+      "local_step_min": 1,
+      "local_step_max": 6,
+      "local_time_mapping": "local_time=(local_step-1)/(local_step_max-1)",
+      "global_time_mapping_note": "全章の最終global_step_maxが確定後、Time_Step=(global_step-1)/(global_step_max-1)で再計算する"
+    }
+  },
+  {
+    "chapter": {
+      "title": "二、活版所",
+      "scene_id": "2_printshop"
+    },
+    "start_global_step": 7,
+    "time_series_data": [
+      {
+        "global_step": 7,
+        "local_step": 1,
+        "scene_id": "2_printshop",
+        "event": "友人たちの輪から外れて立ち去る",
+        "x": [
+          0.45,
+          0.6,
+          0.0
+        ],
+        "local_time": 0.0,
+        "status": "unlabeled",
+        "desc": "星祭の相談に加わらず、関係から距離を取る行動を選ぶ。",
+        "evidence": [
+          "七八人は…集まっていました",
+          "手を大きく振って…出て来ました"
+        ]
+      },
+      {
+        "global_step": 8,
+        "local_step": 2,
+        "scene_id": "2_printshop",
+        "event": "町の祝祭準備を横目に働きへ向かう",
+        "x": [
+          0.45,
+          0.65,
+          0.2
+        ],
+        "local_time": 0.2,
+        "status": "unlabeled",
+        "desc": "周囲の華やかさと自分の進路（労働）が対比され、疎外感が強まる。",
+        "evidence": [
+          "銀河の祭りに…仕度をしている",
+          "活版処にはいってすぐ"
+        ]
+      },
+      {
+        "global_step": 9,
+        "local_step": 3,
+        "scene_id": "2_printshop",
+        "event": "作業を受け取り黙々と拾い始める",
+        "x": [
+          0.55,
+          0.6,
+          0.4
+        ],
+        "local_time": 0.4,
+        "status": "unlabeled",
+        "desc": "依頼を受けてすぐ作業に入り、自己維持のための耐久に入る。",
+        "evidence": [
+          "「これだけ拾って行けるかね。」",
+          "拾いはじめました"
+        ]
+      },
+      {
+        "global_step": 10,
+        "local_step": 4,
+        "scene_id": "2_printshop",
+        "event": "嘲弄を受ける（自己防衛の強化）",
+        "x": [
+          0.25,
+          0.78,
+          0.6
+        ],
+        "local_time": 0.6,
+        "status": "labeled",
+        "label": 1,
+        "desc": "からかいと冷笑が明示され、孤立への退避（自己防衛）が前面化する。",
+        "evidence": [
+          "「よう、虫めがね君、お早う。」",
+          "冷くわらいました"
+        ]
+      },
+      {
+        "global_step": 11,
+        "local_step": 5,
+        "scene_id": "2_printshop",
+        "event": "目を拭いながら作業を続ける",
+        "x": [
+          0.4,
+          0.7,
+          0.8
+        ],
+        "local_time": 0.8,
+        "status": "unlabeled",
+        "desc": "苦しさを抱えたまま作業を継続し、耐える形で状況を乗り切る。",
+        "evidence": [
+          "何べんも眼を拭いながら",
+          "だんだんひろいました"
+        ]
+      },
+      {
+        "global_step": 12,
+        "local_step": 6,
+        "scene_id": "2_printshop",
+        "event": "賃金を受け取り気分が持ち直す",
+        "x": [
+          0.6,
+          0.45,
+          1.0
+        ],
+        "local_time": 1.0,
+        "status": "unlabeled",
+        "desc": "小さな達成と報酬で表情が明るくなり、切迫が一時的に緩む。",
+        "evidence": [
+          "小さな銀貨を一つ…渡しました",
+          "俄かに顔いろがよくなって"
+        ]
+      }
+    ],
+    "range": {
+      "local_step_min": 1,
+      "local_step_max": 6,
+      "local_time_mapping": "local_time=(local_step-1)/(local_step_max-1)",
+      "global_time_mapping_note": "全章の最終global_step_maxが確定後、Time_Step=(global_step-1)/(global_step_max-1)で再計算する"
+    }
+  },
+  {
+    "chapter": {
+      "title": "三、家",
+      "scene_id": "3_home"
+    },
+    "start_global_step": 13,
+    "time_series_data": [
+      {
+        "global_step": 13,
+        "local_step": 1,
+        "scene_id": "3_home",
+        "event": "裏町の小さな家へ帰宅する",
+        "x": [
+          0.5,
+          0.55,
+          0.0
+        ],
+        "local_time": 0.0,
+        "status": "unlabeled",
+        "desc": "仕事帰りに家へ戻り、生活の場へ切り替わる。",
+        "evidence": [
+          "ある裏町の小さな家でした",
+          "勢よく帰って来た"
+        ]
+      },
+      {
+        "global_step": 14,
+        "local_step": 2,
+        "scene_id": "3_home",
+        "event": "母の体調を気遣って声をかける",
+        "x": [
+          0.7,
+          0.55,
+          0.11
+        ],
+        "local_time": 0.11,
+        "status": "unlabeled",
+        "desc": "母の具合をまず確認し、他者への配慮が前面に出る。",
+        "evidence": [
+          "「お母さん。いま帰ったよ。」",
+          "工合悪くなかったの"
+        ]
+      },
+      {
+        "global_step": 15,
+        "local_step": 3,
+        "scene_id": "3_home",
+        "event": "母が寝ているのを見て窓を開ける",
+        "x": [
+          0.7,
+          0.6,
+          0.22
+        ],
+        "local_time": 0.22,
+        "status": "unlabeled",
+        "desc": "寝床の母の様子に接し、環境を整えようとする行動が出る。",
+        "evidence": [
+          "白い巾を被って寝んでいた",
+          "ジョバンニは窓をあけました"
+        ]
+      },
+      {
+        "global_step": 16,
+        "local_step": 4,
+        "scene_id": "3_home",
+        "event": "角砂糖を買ったことを伝える（母のための準備）",
+        "x": [
+          0.8,
+          0.55,
+          0.33
+        ],
+        "local_time": 0.33,
+        "status": "labeled",
+        "label": 0,
+        "desc": "母のために買い物をし、ケアの意図が行動として明確に現れる。",
+        "evidence": [
+          "角砂糖を買ってきたよ",
+          "牛乳に入れてあげようと思って"
+        ]
+      },
+      {
+        "global_step": 17,
+        "local_step": 5,
+        "scene_id": "3_home",
+        "event": "牛乳が来ていない可能性に気づく",
+        "x": [
+          0.65,
+          0.7,
+          0.44
+        ],
+        "local_time": 0.44,
+        "status": "unlabeled",
+        "desc": "生活の欠乏が表面化し、切迫感が上がる。",
+        "evidence": [
+          "お母さんの牛乳は来ていない",
+          "来なかったろうかねえ"
+        ]
+      },
+      {
+        "global_step": 18,
+        "local_step": 6,
+        "scene_id": "3_home",
+        "event": "牛乳を取りに行くと申し出る",
+        "x": [
+          0.75,
+          0.78,
+          0.56
+        ],
+        "local_time": 0.56,
+        "status": "unlabeled",
+        "desc": "欠乏への対処として外出を選び、目的は母のために固定される。",
+        "evidence": [
+          "ぼく行ってとって来よう",
+          "牛乳をとりながら見てくるよ"
+        ]
+      },
+      {
+        "global_step": 19,
+        "local_step": 7,
+        "scene_id": "3_home",
+        "event": "父の帰還を強く信じて語る",
+        "x": [
+          0.6,
+          0.65,
+          0.67
+        ],
+        "local_time": 0.67,
+        "status": "unlabeled",
+        "desc": "不確実な状況の中で、父の無事と正しさを信じて不安を支える。",
+        "evidence": [
+          "きっと間もなく帰ってくる",
+          "そんな悪いことをした筈がない"
+        ]
+      },
+      {
+        "global_step": 20,
+        "local_step": 8,
+        "scene_id": "3_home",
+        "event": "『ラッコの上着』をからかわれていると語る",
+        "x": [
+          0.4,
+          0.8,
+          0.78
+        ],
+        "local_time": 0.78,
+        "status": "unlabeled",
+        "desc": "周囲の言葉が疎外感を強め、存在的危機（孤独）が上がる。",
+        "evidence": [
+          "みんながぼくにあうとそれを云う",
+          "ひやかすように云うんだ"
+        ]
+      },
+      {
+        "global_step": 21,
+        "local_step": 9,
+        "scene_id": "3_home",
+        "event": "カムパネルラの配慮を語り、過去の親しさを回想する",
+        "x": [
+          0.65,
+          0.7,
+          0.89
+        ],
+        "local_time": 0.89,
+        "status": "unlabeled",
+        "desc": "孤立の中でも、友の態度や思い出が支えとして立ち上がる。",
+        "evidence": [
+          "カムパネルラなんか決して云わない",
+          "あのころはよかったなあ"
+        ]
+      },
+      {
+        "global_step": 22,
+        "local_step": 10,
+        "scene_id": "3_home",
+        "event": "戸口を出て外へ向かう（帰宅約束を残す）",
+        "x": [
+          0.65,
+          0.75,
+          1.0
+        ],
+        "local_time": 1.0,
+        "status": "unlabeled",
+        "desc": "母への配慮（窓や片付け、帰宅約束）を残しつつ、用事に向けて行動を開始する。",
+        "evidence": [
+          "窓をしめお皿やパンの袋を片附ける",
+          "暗い戸口を出ました"
+        ]
+      }
+    ],
+    "range": {
+      "local_step_min": 1,
+      "local_step_max": 10,
+      "local_time_mapping": "local_time=(local_step-1)/(local_step_max-1)",
+      "global_time_mapping_note": "全章の最終global_step_maxが確定後、Time_Step=(global_step-1)/(global_step_max-1)で再計算する"
+    }
+  },
+  {
+    "chapter": {
+      "title": "四、ケンタウル祭の夜",
+      "scene_id": "4_festival_night"
+    },
+    "start_global_step": 23,
+    "time_series_data": [
+      {
+        "global_step": 23,
+        "local_step": 1,
+        "scene_id": "4_festival_night",
+        "event": "さびしい口付きで坂を下りる",
+        "x": [
+          0.4,
+          0.7,
+          0.0
+        ],
+        "local_time": 0.0,
+        "status": "unlabeled",
+        "desc": "口笛のような表情に孤独がにじみ、存在的危機が高い状態で移動する。",
+        "evidence": [
+          "さびしい口付きで",
+          "町の坂を下りて来た"
+        ]
+      },
+      {
+        "global_step": 24,
+        "local_step": 2,
+        "scene_id": "4_festival_night",
+        "event": "影法師の想像遊びに没入する（推測）",
+        "x": [
+          0.5,
+          0.55,
+          0.11
+        ],
+        "local_time": 0.11,
+        "status": "unlabeled",
+        "desc": "自分を機関車に見立てる想像に入り、気分を切り替えようとする（推測）。",
+        "evidence": [
+          "ぼくは立派な機関車だ",
+          "影法師はコムパスだ"
+        ]
+      },
+      {
+        "global_step": 25,
+        "local_step": 3,
+        "scene_id": "4_festival_night",
+        "event": "ザネリとすれ違い『らっこの上着』を投げつけられる",
+        "x": [
+          0.3,
+          0.85,
+          0.22
+        ],
+        "local_time": 0.22,
+        "status": "labeled",
+        "label": 1,
+        "desc": "からかいが明示され、胸が冷えるほどの羞恥と孤立が自己防衛を強める。",
+        "evidence": [
+          "らっこの上着が来るよ",
+          "ばっと胸がつめたくなり"
+        ]
+      },
+      {
+        "global_step": 26,
+        "local_step": 4,
+        "scene_id": "4_festival_night",
+        "event": "怒って叫び返し、理由を考える",
+        "x": [
+          0.35,
+          0.8,
+          0.33
+        ],
+        "local_time": 0.33,
+        "status": "unlabeled",
+        "desc": "反発しつつも、からかわれる理由をせわしく考え続ける。",
+        "evidence": [
+          "高く叫び返しました",
+          "せわしくいろいろのことを考え"
+        ]
+      },
+      {
+        "global_step": 27,
+        "local_step": 5,
+        "scene_id": "4_festival_night",
+        "event": "飾られた街を通りながら星座早見に見入る",
+        "x": [
+          0.55,
+          0.6,
+          0.44
+        ],
+        "local_time": 0.44,
+        "status": "unlabeled",
+        "desc": "祝祭の装飾の中で、星座の図に注意が吸い寄せられる。",
+        "evidence": [
+          "すっかりきれいに飾られた街",
+          "星座の図に見入りました"
+        ]
+      },
+      {
+        "global_step": 28,
+        "local_step": 6,
+        "scene_id": "4_festival_night",
+        "event": "空の世界を歩きたいと思う（憧れ）",
+        "x": [
+          0.55,
+          0.6,
+          0.56
+        ],
+        "local_time": 0.56,
+        "status": "unlabeled",
+        "desc": "蝎や勇士の星座を思い、どこまでも歩きたいという欲求が立ち上がる。",
+        "evidence": [
+          "どこまでも歩いて見たい",
+          "しばらくぼんやり立って居ました"
+        ]
+      },
+      {
+        "global_step": 29,
+        "local_step": 7,
+        "scene_id": "4_festival_night",
+        "event": "母の牛乳を思い出して急ぐ",
+        "x": [
+          0.75,
+          0.65,
+          0.67
+        ],
+        "local_time": 0.67,
+        "status": "unlabeled",
+        "desc": "目的が母のために戻り、行動が牛乳屋へ収束する。",
+        "evidence": [
+          "お母さんの牛乳のことを思いだして",
+          "牛乳屋の方へ急ぐ"
+        ]
+      },
+      {
+        "global_step": 30,
+        "local_step": 8,
+        "scene_id": "4_festival_night",
+        "event": "祝祭の中で首を垂れ、別のことを考える",
+        "x": [
+          0.45,
+          0.75,
+          0.78
+        ],
+        "local_time": 0.78,
+        "status": "unlabeled",
+        "desc": "周囲の楽しさと切り離され、内面の重さが再び前面に出る。",
+        "evidence": [
+          "深く首を垂れて",
+          "まるでちがったことを考え"
+        ]
+      },
+      {
+        "global_step": 31,
+        "local_step": 9,
+        "scene_id": "4_festival_night",
+        "event": "牛乳屋で断られる",
+        "x": [
+          0.6,
+          0.8,
+          0.89
+        ],
+        "local_time": 0.89,
+        "status": "unlabeled",
+        "desc": "必要性を訴えるが『あしたにして下さい』と言われ、切迫が増す。",
+        "evidence": [
+          "あしたにして下さい",
+          "今晩でないと困るんです"
+        ]
+      },
+      {
+        "global_step": 32,
+        "local_step": 10,
+        "scene_id": "4_festival_night",
+        "event": "同級生の集団を見て近づくが、合唱でからかわれる",
+        "x": [
+          0.25,
+          0.9,
+          1.0
+        ],
+        "local_time": 1.0,
+        "status": "labeled",
+        "label": 1,
+        "desc": "戻ろうとするが思い直して近づいた直後、集団で繰り返しからかわれ孤立が極大になる。",
+        "evidence": [
+          "思わずどきっとして戻ろうと",
+          "みんなが、続いて叫びました"
+        ]
+      }
+    ],
+    "range": {
+      "local_step_min": 1,
+      "local_step_max": 10,
+      "local_time_mapping": "local_time=(local_step-1)/(local_step_max-1)",
+      "global_time_mapping_note": "全章の最終global_step_maxが確定後、Time_Step=(global_step-1)/(global_step_max-1)で再計算する"
+    }
+  },
+  {
+    "chapter": {
+      "title": "五、天気輪（てんきりん）の柱",
+      "scene_id": "5_weather_pillar"
+    },
+    "start_global_step": 33,
+    "time_series_data": [
+      {
+        "global_step": 33,
+        "local_step": 1,
+        "scene_id": "5_weather_pillar",
+        "event": "丘の上の暗い景色へ入り込む",
+        "x": [
+          0.45,
+          0.7,
+          0.0
+        ],
+        "local_time": 0.0,
+        "status": "unlabeled",
+        "desc": "町から離れた暗い丘の描写に移り、孤立した空間へ入る。",
+        "evidence": [
+          "牧場のうしろはゆるい丘",
+          "黒い平らな頂上"
+        ]
+      },
+      {
+        "global_step": 34,
+        "local_step": 2,
+        "scene_id": "5_weather_pillar",
+        "event": "露の林道をどんどん登る",
+        "x": [
+          0.45,
+          0.75,
+          0.14
+        ],
+        "local_time": 0.14,
+        "status": "unlabeled",
+        "desc": "一人で闇の中を進み、切迫（孤独・不安）が持続する。",
+        "evidence": [
+          "どんどんのぼって行きました",
+          "星あかりに照らしだされて"
+        ]
+      },
+      {
+        "global_step": 35,
+        "local_step": 3,
+        "scene_id": "5_weather_pillar",
+        "event": "烏瓜のあかりを連想する",
+        "x": [
+          0.5,
+          0.65,
+          0.29
+        ],
+        "local_time": 0.29,
+        "status": "unlabeled",
+        "desc": "草むらの青い光を見て、さっきの烏瓜の灯を思い出す。",
+        "evidence": [
+          "青びかりを出す小さな虫",
+          "烏瓜のあかりのようだとも思いました"
+        ]
+      },
+      {
+        "global_step": 36,
+        "local_step": 4,
+        "scene_id": "5_weather_pillar",
+        "event": "空が開け天の川と柱を見わける",
+        "x": [
+          0.55,
+          0.6,
+          0.43
+        ],
+        "local_time": 0.43,
+        "status": "unlabeled",
+        "desc": "視界が一気に広がり、天の川と天気輪の柱を認識する。",
+        "evidence": [
+          "空がひらけて",
+          "天気輪の柱も見わけられた"
+        ]
+      },
+      {
+        "global_step": 37,
+        "local_step": 5,
+        "scene_id": "5_weather_pillar",
+        "event": "草に身を投げる（疲労の顕在化）",
+        "x": [
+          0.45,
+          0.78,
+          0.57
+        ],
+        "local_time": 0.57,
+        "status": "unlabeled",
+        "desc": "身体の鼓動が収まらず、冷たい草に倒れこむ。",
+        "evidence": [
+          "どかどかするからだ",
+          "つめたい草に投げました"
+        ]
+      },
+      {
+        "global_step": 38,
+        "local_step": 6,
+        "scene_id": "5_weather_pillar",
+        "event": "町の灯と声を遠くに感じる",
+        "x": [
+          0.45,
+          0.7,
+          0.71
+        ],
+        "local_time": 0.71,
+        "status": "unlabeled",
+        "desc": "祝祭の気配が遠のき、自分だけが外側にいる感覚が強まる。",
+        "evidence": [
+          "町の灯は…ともり",
+          "歌う声や口笛…かすかに"
+        ]
+      },
+      {
+        "global_step": 39,
+        "local_step": 7,
+        "scene_id": "5_weather_pillar",
+        "event": "列車と旅人を想像して悲しみが強まる（推測）",
+        "x": [
+          0.4,
+          0.8,
+          0.86
+        ],
+        "local_time": 0.86,
+        "status": "unlabeled",
+        "desc": "列車内の旅人の様子を思い描き、比較から悲しみが深まる（推測）。",
+        "evidence": [
+          "汽車の音が聞えてきました",
+          "かなしくなって"
+        ]
+      },
+      {
+        "global_step": 40,
+        "local_step": 8,
+        "scene_id": "5_weather_pillar",
+        "event": "星空を温かな場所のように感じはじめる",
+        "x": [
+          0.55,
+          0.65,
+          1.0
+        ],
+        "local_time": 1.0,
+        "status": "unlabeled",
+        "desc": "空を『冷いとこ』と思えず、林や牧場のように近しく感じる方向へ変化する。",
+        "evidence": [
+          "冷いとこだとは思われませんでした",
+          "林や牧場…考えられて"
+        ]
+      }
+    ],
+    "range": {
+      "local_step_min": 1,
+      "local_step_max": 8,
+      "local_time_mapping": "local_time=(local_step-1)/(local_step_max-1)",
+      "global_time_mapping_note": "全章の最終global_step_maxが確定後、Time_Step=(global_step-1)/(global_step_max-1)で再計算する"
+    }
+  },
+  {
+    "chapter": {
+      "title": "六、銀河ステーション",
+      "scene_id": "6_galaxy_station"
+    },
+    "start_global_step": 41,
+    "time_series_data": [
+      {
+        "global_step": 41,
+        "local_step": 1,
+        "scene_id": "6_galaxy_station",
+        "event": "天気輪の柱が標識のように変わって見える",
+        "x": [
+          0.5,
+          0.7,
+          0.0
+        ],
+        "local_time": 0.0,
+        "status": "unlabeled",
+        "desc": "見えているものが形を変え、現実感が揺らぐ導入に入る。",
+        "evidence": [
+          "三角標の形になって",
+          "りんとうごかないようになり"
+        ]
+      },
+      {
+        "global_step": 42,
+        "local_step": 2,
+        "scene_id": "6_galaxy_station",
+        "event": "『銀河ステーション』の声と眩い明るさに圧倒される",
+        "x": [
+          0.5,
+          0.65,
+          0.14
+        ],
+        "local_time": 0.14,
+        "status": "unlabeled",
+        "desc": "強烈な光景に驚き、現実の把握が追いつかない状態になる。",
+        "evidence": [
+          "銀河ステーション…という声",
+          "何べんも眼を擦って"
+        ]
+      },
+      {
+        "global_step": 43,
+        "local_step": 3,
+        "scene_id": "6_galaxy_station",
+        "event": "列車の車室に座っていたと気づく",
+        "x": [
+          0.55,
+          0.55,
+          0.29
+        ],
+        "local_time": 0.29,
+        "status": "unlabeled",
+        "desc": "状況を把握し直し、空間が『列車内』として具体化する。",
+        "evidence": [
+          "小さな列車が走りつづけて",
+          "座っていたのです"
+        ]
+      },
+      {
+        "global_step": 44,
+        "local_step": 4,
+        "scene_id": "6_galaxy_station",
+        "event": "前の席の子が誰か知りたくてたまらなくなる",
+        "x": [
+          0.55,
+          0.6,
+          0.43
+        ],
+        "local_time": 0.43,
+        "status": "unlabeled",
+        "desc": "相手への関心が強く立ち上がり、孤立から関係へ視線が移る。",
+        "evidence": [
+          "誰だかわかりたくて",
+          "たまらなくなりました"
+        ]
+      },
+      {
+        "global_step": 45,
+        "local_step": 5,
+        "scene_id": "6_galaxy_station",
+        "event": "カムパネルラだと判明する",
+        "x": [
+          0.7,
+          0.5,
+          0.57
+        ],
+        "local_time": 0.57,
+        "status": "unlabeled",
+        "desc": "同伴者の存在が確定し、関係の回復が始まる。",
+        "evidence": [
+          "それはカムパネルラだった",
+          "こっちを見ました"
+        ]
+      },
+      {
+        "global_step": 46,
+        "local_step": 6,
+        "scene_id": "6_galaxy_station",
+        "event": "『遅れてしまった』と共有し、待つ提案をする",
+        "x": [
+          0.7,
+          0.55,
+          0.71
+        ],
+        "local_time": 0.71,
+        "status": "unlabeled",
+        "desc": "自分たちの状況を共有し、いっしょに行動する方向が明確になる。",
+        "evidence": [
+          "遅れてしまったよ",
+          "どこかで待っていようか"
+        ]
+      },
+      {
+        "global_step": 47,
+        "local_step": 7,
+        "scene_id": "6_galaxy_station",
+        "event": "カムパネルラの青ざめと沈黙で不安が入る",
+        "x": [
+          0.55,
+          0.7,
+          0.86
+        ],
+        "local_time": 0.86,
+        "status": "unlabeled",
+        "desc": "相手の様子から不穏さが差し込み、落ち着かない気持ちになる。",
+        "evidence": [
+          "少し顔いろが青ざめて",
+          "だまってしまいました"
+        ]
+      },
+      {
+        "global_step": 48,
+        "local_step": 8,
+        "scene_id": "6_galaxy_station",
+        "event": "地図を得て進路を確かめる（共同の旅が具体化）",
+        "x": [
+          0.75,
+          0.55,
+          1.0
+        ],
+        "local_time": 1.0,
+        "status": "unlabeled",
+        "desc": "銀河の地図を介して旅が具体的になり、二人の共有世界が形を持つ。",
+        "evidence": [
+          "地図を…ぐるぐるまわして",
+          "銀河ステーションで、もらった"
+        ]
+      }
+    ],
+    "range": {
+      "local_step_min": 1,
+      "local_step_max": 8,
+      "local_time_mapping": "local_time=(local_step-1)/(local_step_max-1)",
+      "global_time_mapping_note": "全章の最終global_step_maxが確定後、Time_Step=(global_step-1)/(global_step_max-1)で再計算する"
+    }
+  },
+  {
+    "chapter": {
+      "title": "七、北十字とプリオシン海岸",
+      "scene_id": "7_cross_priosin"
+    },
+    "start_global_step": 49,
+    "time_series_data": [
+      {
+        "global_step": 49,
+        "local_step": 1,
+        "scene_id": "7_cross_priosin",
+        "event": "カムパネルラの問いを聞く",
+        "x": [
+          0.65,
+          0.6,
+          0.0
+        ],
+        "local_time": 0.0,
+        "status": "unlabeled",
+        "desc": "カムパネルラの母への言葉を受け取り、場の緊張が立ち上がる。",
+        "evidence": [
+          "おっかさんは、ぼくをゆるして",
+          "急きこんで云いました"
+        ]
+      },
+      {
+        "global_step": 50,
+        "local_step": 2,
+        "scene_id": "7_cross_priosin",
+        "event": "母の存在を思い浮かべて黙る",
+        "x": [
+          0.65,
+          0.65,
+          0.14
+        ],
+        "local_time": 0.14,
+        "status": "unlabeled",
+        "desc": "自分の母を思い浮かべながら、ぼんやりして言葉が出ない。",
+        "evidence": [
+          "ぼくのおっかさんは",
+          "ぼんやりしてだまっていました"
+        ]
+      },
+      {
+        "global_step": 51,
+        "local_step": 3,
+        "scene_id": "7_cross_priosin",
+        "event": "母の幸のために何でもするという言葉を聞く",
+        "x": [
+          0.75,
+          0.7,
+          0.29
+        ],
+        "local_time": 0.29,
+        "status": "unlabeled",
+        "desc": "他者（母）の幸せを中心に据えた言葉が提示される。",
+        "evidence": [
+          "どんなことでもする",
+          "いちばんの幸なんだろう"
+        ]
+      },
+      {
+        "global_step": 52,
+        "local_step": 4,
+        "scene_id": "7_cross_priosin",
+        "event": "ジョバンニが驚いて反応する",
+        "x": [
+          0.65,
+          0.65,
+          0.43
+        ],
+        "local_time": 0.43,
+        "status": "unlabeled",
+        "desc": "意外さから声が出て、会話が表に出る。",
+        "evidence": [
+          "びっくりして叫びました",
+          "ひどいことないじゃないの"
+        ]
+      },
+      {
+        "global_step": 53,
+        "local_step": 5,
+        "scene_id": "7_cross_priosin",
+        "event": "『ほんとうにいいこと』と赦しの決心を聞く",
+        "x": [
+          0.8,
+          0.65,
+          0.57
+        ],
+        "local_time": 0.57,
+        "status": "unlabeled",
+        "desc": "善い行いと赦しへの確信が語られ、価値判断が前面化する。",
+        "evidence": [
+          "ほんとうにいいことをしたら",
+          "決心しているように見えました"
+        ]
+      },
+      {
+        "global_step": 54,
+        "local_step": 6,
+        "scene_id": "7_cross_priosin",
+        "event": "十字架の光景と祈りに直面する",
+        "x": [
+          0.7,
+          0.6,
+          0.71
+        ],
+        "local_time": 0.71,
+        "status": "unlabeled",
+        "desc": "車内外の変化と祈りの場に巻き込まれ、二人も立ち上がる。",
+        "evidence": [
+          "ぱっと白く明るくなりました",
+          "思わず二人も…立ちあがりました"
+        ]
+      },
+      {
+        "global_step": 55,
+        "local_step": 7,
+        "scene_id": "7_cross_priosin",
+        "event": "新らしい気持ちをそっと話し合う",
+        "x": [
+          0.7,
+          0.6,
+          0.86
+        ],
+        "local_time": 0.86,
+        "status": "unlabeled",
+        "desc": "胸いっぱいの気持ちを共有し、関係の中で整理しようとする。",
+        "evidence": [
+          "新らしい気持ちを",
+          "そっと談し合ったのです"
+        ]
+      },
+      {
+        "global_step": 56,
+        "local_step": 8,
+        "scene_id": "7_cross_priosin",
+        "event": "白鳥停車場で下車を決めて駆け出す",
+        "x": [
+          0.65,
+          0.55,
+          1.0
+        ],
+        "local_time": 1.0,
+        "status": "unlabeled",
+        "desc": "停車場に着き、二人で降りて改札へ向かう行動に移る。",
+        "evidence": [
+          "ぼくたちも降りて見ようか",
+          "ドアを飛び出して改札口へ"
+        ]
+      },
+      {
+        "global_step": 57,
+        "local_step": 9,
+        "scene_id": "7_cross_priosin",
+        "event": "無人の改札と広場へ出る",
+        "x": [
+          0.6,
+          0.6,
+          1.14
+        ],
+        "local_time": 1.14,
+        "status": "unlabeled",
+        "desc": "人の気配がなく、二人だけで進む場面に移る。",
+        "evidence": [
+          "誰も居ませんでした",
+          "小さな広場に出ました"
+        ]
+      }
+    ],
+    "range": {
+      "local_step_min": 1,
+      "local_step_max": 9,
+      "local_time_mapping": "local_time=(local_step-1)/(local_step_max-1)",
+      "global_time_mapping_note": "全章の最終global_step_maxが確定後、Time_Step=(global_step-1)/(global_step_max-1)で再計算する"
+    }
+  },
+  {
+    "chapter": {
+      "title": "八、鳥を捕（と）る人",
+      "scene_id": "8_bird_catcher"
+    },
+    "start_global_step": 58,
+    "time_series_data": [
+      {
+        "global_step": 58,
+        "local_step": 1,
+        "scene_id": "8_bird_catcher",
+        "event": "見知らぬ大人に声をかけられる",
+        "x": [
+          0.55,
+          0.5,
+          0.0
+        ],
+        "local_time": 0.0,
+        "status": "unlabeled",
+        "desc": "背後からの呼びかけで場が更新され、ジョバンニは応対に入る。",
+        "evidence": [
+          "ここへかけてもようございますか",
+          "二人のうしろで聞えました"
+        ]
+      },
+      {
+        "global_step": 59,
+        "local_step": 2,
+        "scene_id": "8_bird_catcher",
+        "event": "控えめに挨拶し、さびしさを覚える",
+        "x": [
+          0.45,
+          0.65,
+          0.11
+        ],
+        "local_time": 0.11,
+        "status": "unlabeled",
+        "desc": "肩をすぼめて応じた後、さびしい気持ちが前に出る。",
+        "evidence": [
+          "少し肩をすぼめて挨拶しました",
+          "大へんさびしいような"
+        ]
+      },
+      {
+        "global_step": 60,
+        "local_step": 3,
+        "scene_id": "8_bird_catcher",
+        "event": "行き先を問われ、曖昧に答える",
+        "x": [
+          0.5,
+          0.55,
+          0.22
+        ],
+        "local_time": 0.22,
+        "status": "unlabeled",
+        "desc": "質問に対し、きまり悪さを伴う曖昧な返答をする。",
+        "evidence": [
+          "どちらへいらっしゃるんですか",
+          "どこまでも行くんです"
+        ]
+      },
+      {
+        "global_step": 61,
+        "local_step": 4,
+        "scene_id": "8_bird_catcher",
+        "event": "カムパネルラの強い問いで場が和らぐ",
+        "x": [
+          0.6,
+          0.45,
+          0.33
+        ],
+        "local_time": 0.33,
+        "status": "unlabeled",
+        "desc": "喧嘩のような問いかけをきっかけに笑いが起こり、緊張がゆるむ。",
+        "evidence": [
+          "喧嘩のようにたずねました",
+          "思わずわらいました"
+        ]
+      },
+      {
+        "global_step": 62,
+        "local_step": 5,
+        "scene_id": "8_bird_catcher",
+        "event": "鳥捕りの商売話を聞き、耳をすます",
+        "x": [
+          0.55,
+          0.45,
+          0.44
+        ],
+        "local_time": 0.44,
+        "status": "unlabeled",
+        "desc": "鶴や鷺の話に引き込まれ、音に注意を向ける。",
+        "evidence": [
+          "鳥をつかまえる商売でね",
+          "耳をすまして聴いてごらんなさい"
+        ]
+      },
+      {
+        "global_step": 63,
+        "local_step": 6,
+        "scene_id": "8_bird_catcher",
+        "event": "捕り方の説明に触れ、現物提示に立ち会う",
+        "x": [
+          0.5,
+          0.5,
+          0.56
+        ],
+        "local_time": 0.56,
+        "status": "unlabeled",
+        "desc": "押し葉や食用の説明を受け、包みを開いて鷺を見せられる。",
+        "evidence": [
+          "押し葉にするだけです",
+          "いまとって来たばかりです"
+        ]
+      },
+      {
+        "global_step": 64,
+        "local_step": 7,
+        "scene_id": "8_bird_catcher",
+        "event": "雁を勧められ、食べて内心で疑う",
+        "x": [
+          0.45,
+          0.6,
+          0.67
+        ],
+        "local_time": 0.67,
+        "status": "unlabeled",
+        "desc": "勧められて口にしつつ、菓子だという内心の判断と気の毒さが生じる。",
+        "evidence": [
+          "どうです、少しおあがりなさい",
+          "こいつはお菓子だ"
+        ]
+      },
+      {
+        "global_step": 65,
+        "local_step": 8,
+        "scene_id": "8_bird_catcher",
+        "event": "遠慮して断り、鳥捕りが別の客へ向ける",
+        "x": [
+          0.55,
+          0.45,
+          0.78
+        ],
+        "local_time": 0.78,
+        "status": "unlabeled",
+        "desc": "食べたい気持ちは残るが、礼を言って遠慮する行動に移る。",
+        "evidence": [
+          "もっとたべたかったのですけれども",
+          "ええ、ありがとう"
+        ]
+      },
+      {
+        "global_step": 66,
+        "local_step": 9,
+        "scene_id": "8_bird_catcher",
+        "event": "『鳥ではない』と問い、相手が慌てて席を外す",
+        "x": [
+          0.55,
+          0.55,
+          0.89
+        ],
+        "local_time": 0.89,
+        "status": "unlabeled",
+        "desc": "疑念が言葉として出て、鳥捕りが急に降りる行動へ移る。",
+        "evidence": [
+          "こいつは鳥じゃない",
+          "ここで降りなけぁ"
+        ]
+      },
+      {
+        "global_step": 67,
+        "local_step": 10,
+        "scene_id": "8_bird_catcher",
+        "event": "外での捕獲を目撃し、不思議さが強まる",
+        "x": [
+          0.5,
+          0.65,
+          1.0
+        ],
+        "local_time": 1.0,
+        "status": "unlabeled",
+        "desc": "窓外で鳥捕りが鷺を押える様子を見て、現象の不思議さにさらされる。",
+        "evidence": [
+          "鷺が、まるで雪の降るように",
+          "片っ端から押えて"
+        ]
+      }
+    ],
+    "range": {
+      "local_step_min": 1,
+      "local_step_max": 10,
+      "local_time_mapping": "local_time=(local_step-1)/(local_step_max-1)",
+      "global_time_mapping_note": "全章の最終global_step_maxが確定後、Time_Step=(global_step-1)/(global_step_max-1)で再計算する"
+    }
+  },
+  {
+    "chapter": {
+      "title": "九、ジョバンニの切符（きっぷ）",
+      "scene_id": "9_ticket"
+    },
+    "start_global_step": 68,
+    "time_series_data": [
+      {
+        "global_step": 68,
+        "local_step": 1,
+        "scene_id": "9_ticket",
+        "event": "観測所を眺めているところへ車掌の確認が入る",
+        "x": [
+          0.5,
+          0.3,
+          0.0
+        ],
+        "local_time": 0.0,
+        "status": "unlabeled",
+        "desc": "白鳥区の終わりを告げられ、アルビレオの観測所を眺めている最中に、切符確認の場面へ移る。",
+        "evidence": [
+          "あれが名高いアルビレオの観測所",
+          "切符を拝見いたします。"
+        ]
+      },
+      {
+        "global_step": 69,
+        "local_step": 2,
+        "scene_id": "9_ticket",
+        "event": "切符を求められ慌てて緑の紙を渡す",
+        "x": [
+          0.5,
+          0.55,
+          0.0333333333
+        ],
+        "local_time": 0.0333333333,
+        "status": "unlabeled",
+        "desc": "車掌に求められて困り、ポケットを探って緑色の紙を見つけ、勢いで差し出す。",
+        "evidence": [
+          "困って、もじもじしていましたら",
+          "緑いろの紙でした。"
+        ]
+      },
+      {
+        "global_step": 70,
+        "local_step": 3,
+        "scene_id": "9_ticket",
+        "event": "車掌の問いに安心して笑う",
+        "x": [
+          0.55,
+          0.35,
+          0.0666666667
+        ],
+        "local_time": 0.0666666667,
+        "status": "unlabeled",
+        "desc": "車掌から由来を問われるが、もう大丈夫だと安心し、笑って返す。",
+        "evidence": [
+          "これは三次空間の方から",
+          "くつくつ笑いました。"
+        ]
+      },
+      {
+        "global_step": 71,
+        "local_step": 4,
+        "scene_id": "9_ticket",
+        "event": "鳥捕りの評価に気まずさを覚える",
+        "x": [
+          0.45,
+          0.45,
+          0.1
+        ],
+        "local_time": 0.1,
+        "status": "unlabeled",
+        "desc": "紙をのぞく鳥捕りに価値を言い立てられ、赤くなって畳み隠し、視線が気になる。",
+        "evidence": [
+          "大したもんですぜ。",
+          "赤くなって答えながら"
+        ]
+      },
+      {
+        "global_step": 72,
+        "local_step": 5,
+        "scene_id": "9_ticket",
+        "event": "鳥捕りへの思いが募る中で姿が消える",
+        "x": [
+          0.8,
+          0.6,
+          0.1333333333
+        ],
+        "local_time": 0.1333333333,
+        "status": "unlabeled",
+        "desc": "見ず知らずの鳥捕りを気の毒に思い、声をかけようとするが、振り返るともういない。",
+        "evidence": [
+          "気の毒でたまらなくなりました",
+          "そこにはもうあの鳥捕りが居ません"
+        ]
+      },
+      {
+        "global_step": 73,
+        "local_step": 6,
+        "scene_id": "9_ticket",
+        "event": "後悔の言葉の直後に新しい乗客が現れる",
+        "x": [
+          0.6,
+          0.65,
+          0.1666666667
+        ],
+        "local_time": 0.1666666667,
+        "status": "unlabeled",
+        "desc": "自分の気持ちを悔やむ中で、震える男の子と青年、女の子が突然車内にいるのに気づく。",
+        "evidence": [
+          "僕はあの人が邪魔（じゃま）なような気がした",
+          "がたがたふるえてはだしで立っていました"
+        ]
+      },
+      {
+        "global_step": 74,
+        "local_step": 7,
+        "scene_id": "9_ticket",
+        "event": "青年の言葉と姉の涙を目の当たりにする",
+        "x": [
+          0.7,
+          0.6,
+          0.2
+        ],
+        "local_time": 0.2,
+        "status": "unlabeled",
+        "desc": "青年は天へ行くと語り、姉は泣き出す。車内の空気が沈む。",
+        "evidence": [
+          "わたしたちは天へ行くのです。",
+          "しくしく泣いてしまいました。"
+        ]
+      },
+      {
+        "global_step": 75,
+        "local_step": 8,
+        "scene_id": "9_ticket",
+        "event": "青年が遭難の経緯を語り始める",
+        "x": [
+          0.75,
+          0.7,
+          0.2333333333
+        ],
+        "local_time": 0.2333333333,
+        "status": "unlabeled",
+        "desc": "燈台看守に問われ、青年は船が氷山にぶつかったこと、ボートが足りないことを語る。",
+        "evidence": [
+          "船が氷山にぶっつかって",
+          "どうか小さな人たちを乗せて下さい"
+        ]
+      },
+      {
+        "global_step": 76,
+        "local_step": 9,
+        "scene_id": "9_ticket",
+        "event": "青年の葛藤と転落の話が続く",
+        "x": [
+          0.75,
+          0.75,
+          0.2666666667
+        ],
+        "local_time": 0.2666666667,
+        "status": "unlabeled",
+        "desc": "助けたい思いと押しのけられない思いの間で揺れ、抱いて沈むのを待ち、水に落ちたと語る。",
+        "evidence": [
+          "腸（はらわた）もちぎれるようでした",
+          "大きな音がして私たちは水に落ち"
+        ]
+      },
+      {
+        "global_step": 77,
+        "local_step": 10,
+        "scene_id": "9_ticket",
+        "event": "祈りの気配の中でジョバンニが塞ぎ込む",
+        "x": [
+          0.75,
+          0.85,
+          0.3
+        ],
+        "local_time": 0.3,
+        "status": "unlabeled",
+        "desc": "祈りの声が聞こえ、いろいろ思い出して眼が熱くなり、その後首を垂れてふさぎ込む。",
+        "evidence": [
+          "小さないのりの声が聞え",
+          "首を垂れて、すっかりふさぎ込"
+        ]
+      },
+      {
+        "global_step": 78,
+        "local_step": 11,
+        "scene_id": "9_ticket",
+        "event": "苹果を勧められ呼ばれ方に反発する",
+        "x": [
+          0.2,
+          0.6,
+          0.3333333333
+        ],
+        "local_time": 0.3333333333,
+        "status": "labeled",
+        "label": 1,
+        "desc": "燈台看守の苹果の申し出の中で「坊ちゃん」と呼ばれ、しゃくにさわって黙る。",
+        "evidence": [
+          "こういう苹果（りんご）はおはじめて",
+          "すこししゃくにさわってだまっていました"
+        ]
+      },
+      {
+        "global_step": 79,
+        "local_step": 12,
+        "scene_id": "9_ticket",
+        "event": "礼を言って受け取り、夢の話に触れる",
+        "x": [
+          0.6,
+          0.5,
+          0.3666666667
+        ],
+        "local_time": 0.3666666667,
+        "status": "unlabeled",
+        "desc": "青年から苹果が回され、ジョバンニも礼を言う。男の子が母の夢を語り始める。",
+        "evidence": [
+          "立ってありがとうと云いました。",
+          "お母さんの夢（ゆめ）をみていたよ。"
+        ]
+      },
+      {
+        "global_step": 80,
+        "local_step": 13,
+        "scene_id": "9_ticket",
+        "event": "呼び違いと合唱の流れの中で気持ちが揺れる",
+        "x": [
+          0.65,
+          0.45,
+          0.4
+        ],
+        "local_time": 0.4,
+        "status": "unlabeled",
+        "desc": "女の子の呼び違いにカムパネルラが訂正し、ジョバンニは笑う。その後、歌が聞こえ皆が歌い出す。",
+        "evidence": [
+          "みんなかささぎだ。",
+          "一緒（いっしょ）にうたい出した"
+        ]
+      },
+      {
+        "global_step": 81,
+        "local_step": 14,
+        "scene_id": "9_ticket",
+        "event": "話しかけられて閉じこもり涙に至る",
+        "x": [
+          0.3,
+          0.85,
+          0.4333333333
+        ],
+        "local_time": 0.4333333333,
+        "status": "unlabeled",
+        "desc": "女の子に話しかけられても黙り、明るい所へ顔を出すのがつらくて耐え、孤独の思いが涙になる。",
+        "evidence": [
+          "口笛（くちぶえ）を吹（ふ）いていました",
+          "泪（なみだ）でいっぱいになり"
+        ]
+      },
+      {
+        "global_step": 82,
+        "local_step": 15,
+        "scene_id": "9_ticket",
+        "event": "停車場の静けさの中でつらさが続く",
+        "x": [
+          0.3,
+          0.85,
+          0.4666666667
+        ],
+        "local_time": 0.4666666667,
+        "status": "unlabeled",
+        "desc": "とうもろこし畑を見ながらぶっきらぼうに答え、第二時を示す時計の静けさの中でもつらさが消えない。",
+        "evidence": [
+          "かっきり第二時を示し",
+          "僕はほんとうにつらい。"
+        ]
+      },
+      {
+        "global_step": 83,
+        "local_step": 16,
+        "scene_id": "9_ticket",
+        "event": "高原の話とインデアンの狩りを見て立ち上がる",
+        "x": [
+          0.55,
+          0.5,
+          0.5
+        ],
+        "local_time": 0.5,
+        "status": "unlabeled",
+        "desc": "峡谷の話が聞こえる中、黒い野原に現れたインデアンの動きに合わせて立ち上がり、鶴が落ちるのを見る。",
+        "evidence": [
+          "ひどい峡谷（きょうこく）",
+          "一羽の鶴（つる）がふらふらと落ち"
+        ]
+      },
+      {
+        "global_step": 84,
+        "local_step": 17,
+        "scene_id": "9_ticket",
+        "event": "下りの加速の中で気持ちが明るくなる",
+        "x": [
+          0.65,
+          0.3,
+          0.5333333333
+        ],
+        "local_time": 0.5333333333,
+        "status": "unlabeled",
+        "desc": "汽車が降りていくにつれ、ジョバンニは明るくなり、カムパネルラと笑い合う。",
+        "evidence": [
+          "こころもちが明るくなって来ました",
+          "思わずカムパネルラとわらいました"
+        ]
+      },
+      {
+        "global_step": 85,
+        "local_step": 18,
+        "scene_id": "9_ticket",
+        "event": "発破と魚の跳ね上がりで高揚する",
+        "x": [
+          0.65,
+          0.3,
+          0.5666666667
+        ],
+        "local_time": 0.5666666667,
+        "status": "unlabeled",
+        "desc": "発破で水が柱のように上がり魚が空中へ抛り出され、ジョバンニは気持ちが軽くなって愉快さを口にする。",
+        "evidence": [
+          "発破（はっぱ）だよ、発破だよ。",
+          "僕こんな愉快な旅はしたことない"
+        ]
+      },
+      {
+        "global_step": 86,
+        "local_step": 19,
+        "scene_id": "9_ticket",
+        "event": "双子の宮の話から赤い火へ注意が移る",
+        "x": [
+          0.6,
+          0.4,
+          0.6
+        ],
+        "local_time": 0.6,
+        "status": "unlabeled",
+        "desc": "双子のお星さまのお宮の話で騒ぐ中、向こう岸が赤くなり大きな火が燃えているのを見る。",
+        "evidence": [
+          "双子のお星さまのお宮だよ。",
+          "大きなまっ赤な火が燃され"
+        ]
+      },
+      {
+        "global_step": 87,
+        "local_step": 20,
+        "scene_id": "9_ticket",
+        "event": "蝎の火の物語を聞く",
+        "x": [
+          0.75,
+          0.5,
+          0.6333333333
+        ],
+        "local_time": 0.6333333333,
+        "status": "unlabeled",
+        "desc": "カムパネルラの説明と女の子の語りで、蝎が「みんなの幸い」のために祈った話を聞く。",
+        "evidence": [
+          "蝎（さそり）の火だな。",
+          "みんなの幸（さいわい）のために"
+        ]
+      },
+      {
+        "global_step": 88,
+        "local_step": 21,
+        "scene_id": "9_ticket",
+        "event": "祭の気配と村の灯りに包まれる",
+        "x": [
+          0.6,
+          0.4,
+          0.6666666667
+        ],
+        "local_time": 0.6666666667,
+        "status": "unlabeled",
+        "desc": "にぎやかな音や匂いの気配の中で、豆電燈のついた木々が見え、ケンタウルの村だとわかる。",
+        "evidence": [
+          "今夜ケンタウル祭だねえ。",
+          "ここはケンタウルの村だよ。"
+        ]
+      },
+      {
+        "global_step": 89,
+        "local_step": 22,
+        "scene_id": "9_ticket",
+        "event": "南十字が近づき下車の支度が促される",
+        "x": [
+          0.6,
+          0.45,
+          0.7
+        ],
+        "local_time": 0.7,
+        "status": "unlabeled",
+        "desc": "青年がもうじきサウザンクロスだと告げ、みんなが下りる支度に向かう。",
+        "evidence": [
+          "もうじきサウザンクロスです。",
+          "おりる支度（したく）をして下さい。"
+        ]
+      },
+      {
+        "global_step": 90,
+        "local_step": 23,
+        "scene_id": "9_ticket",
+        "event": "別れを惜しむやり取りが続く",
+        "x": [
+          0.55,
+          0.65,
+          0.7333333333
+        ],
+        "local_time": 0.7333333333,
+        "status": "unlabeled",
+        "desc": "ジョバンニは一緒に乗ろうと持ちかけ、女の子たちは天上へ行くと言い、別れが惜しい空気が強まる。",
+        "evidence": [
+          "僕たちどこまでだって行ける切符",
+          "みんなほんとうに別れが惜（お）しそう"
+        ]
+      },
+      {
+        "global_step": 91,
+        "local_step": 24,
+        "scene_id": "9_ticket",
+        "event": "十字架の出現に合わせて祈りが広がる",
+        "x": [
+          0.65,
+          0.65,
+          0.7666666667
+        ],
+        "local_time": 0.7666666667,
+        "status": "unlabeled",
+        "desc": "川下に十字架が立って輝き、車内がざわざわして、みんなが立って祈りはじめる。",
+        "evidence": [
+          "十字架（じゅうじか）がまるで一本の木",
+          "お祈りをはじめました。"
+        ]
+      },
+      {
+        "global_step": 92,
+        "local_step": 25,
+        "scene_id": "9_ticket",
+        "event": "停車と下車で車内が空きさびしくなる",
+        "x": [
+          0.55,
+          0.75,
+          0.8
+        ],
+        "local_time": 0.8,
+        "status": "unlabeled",
+        "desc": "汽車が止まり、青年たちは出口へ向かう。別れの挨拶の後、車内はがらんとして風が吹き込む。",
+        "evidence": [
+          "すっかりとまりました。",
+          "がらんとしてさびしくなり"
+        ]
+      },
+      {
+        "global_step": 93,
+        "local_step": 26,
+        "scene_id": "9_ticket",
+        "event": "渚の光景が霧に隠れていく",
+        "x": [
+          0.65,
+          0.65,
+          0.8333333333
+        ],
+        "local_time": 0.8333333333,
+        "status": "unlabeled",
+        "desc": "十字架の前でひざまずく列と白いきものの人を見たが、霧が流れて来て見えなくなる。",
+        "evidence": [
+          "列を組んであの十字架の前",
+          "銀いろの霧（きり）が"
+        ]
+      },
+      {
+        "global_step": 94,
+        "local_step": 27,
+        "scene_id": "9_ticket",
+        "event": "灯りの列に沿って進み深く息をつく",
+        "x": [
+          0.6,
+          0.55,
+          0.8666666667
+        ],
+        "local_time": 0.8666666667,
+        "status": "unlabeled",
+        "desc": "霧がはれかかり、電燈の列の通りが現れる。灯りが消えたり点いたりする中で、ジョバンニは深く息をつく。",
+        "evidence": [
+          "ぽかっと消え",
+          "ジョバンニはああと深く息しました。"
+        ]
+      },
+      {
+        "global_step": 95,
+        "local_step": 28,
+        "scene_id": "9_ticket",
+        "event": "二人で『みんなの幸い』への決意を述べ合う",
+        "x": [
+          0.95,
+          0.6,
+          0.9
+        ],
+        "local_time": 0.9,
+        "status": "labeled",
+        "label": 0,
+        "desc": "また二人きりになり、ジョバンニは自己犠牲も厭わず「みんなの幸い」のために生きると明言する。",
+        "evidence": [
+          "みんなの幸（さいわい）のためならば",
+          "百ぺん灼（や）いてもかまわない"
+        ]
+      },
+      {
+        "global_step": 96,
+        "local_step": 29,
+        "scene_id": "9_ticket",
+        "event": "暗い孔を見て衝撃を受けるが前進を言う",
+        "x": [
+          0.85,
+          0.7,
+          0.9333333333
+        ],
+        "local_time": 0.9333333333,
+        "status": "unlabeled",
+        "desc": "天の川の大きな暗い孔にぎくっとしつつも、こわくないと述べ、幸いを探しに進むと言う。",
+        "evidence": [
+          "大きなまっくらな孔がどほんと",
+          "僕もうあんな大きな暗（やみ）の中"
+        ]
+      },
+      {
+        "global_step": 97,
+        "local_step": 30,
+        "scene_id": "9_ticket",
+        "event": "カムパネルラの不在に気づき激しく泣く",
+        "x": [
+          0.8,
+          1.0,
+          0.9666666667
+        ],
+        "local_time": 0.9666666667,
+        "status": "unlabeled",
+        "desc": "カムパネルラの姿が席から消えているのに気づき、窓の外へ身を乗り出して叫び、泣き出す。",
+        "evidence": [
+          "もうカムパネルラの形は見えず",
+          "咽喉（のど）いっぱい泣きだしました"
+        ]
+      },
+      {
+        "global_step": 98,
+        "local_step": 31,
+        "scene_id": "9_ticket",
+        "event": "母のもとへ急ぎ、伝えることを胸に走り出す",
+        "x": [
+          0.8,
+          0.9,
+          1.0
+        ],
+        "local_time": 1.0,
+        "status": "unlabeled",
+        "desc": "捜索の場面で胸がいっぱいになりながらも、牛乳を母に届け、父のことを知らせようと決めて、街の方へ一目散に走る（到着の描写自体は本文にはない）。",
+        "evidence": [
+          "お母さんに牛乳を持って行って",
+          "お父さんの帰ることを知らせよう"
+        ]
+      }
+    ],
+    "range": {
+      "local_step_min": 1,
+      "local_step_max": 31,
+      "local_time_mapping": "local_time=(local_step-1)/(local_step_max-1)",
+      "global_time_mapping_note": "全章の最終global_step_maxが確定後、Time_Step=(global_step-1)/(global_step_max-1)で再計算する"
+    }
+  }
+]
